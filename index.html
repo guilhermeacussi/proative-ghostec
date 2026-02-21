@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ghostec — Empresa focada em segurança e inovação tecnológica.">
+    <title>Ghostec — Segurança & Inovação</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        /* Produto layout refinado */
+.product-content {
+    max-width: 900px;
+}
+
+.product-text {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.product-text p {
+    font-size: 18px;
+    color: #cfcfcf;
+    line-height: 1.9;
+    margin-bottom: 25px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+}
+
+/* Cascata elegante */
+.reveal.active .product-text p:nth-child(1) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+}
+
+.reveal.active .product-text p:nth-child(2) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.6s;
+}
+
+.reveal.active .product-text p:nth-child(3) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.9s;
+}
+
+.reveal.active .product-text p:nth-child(4) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 1.2s;
+}
+
+/* Destaque Who? */
+.who-highlight {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* Botão GitHub minimalista */
+.github-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 28px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.github-button:hover {
+    background: #ffffff;
+    color: #0a0a0a;
+}
+
+/* Animação do botão junto com cascata */
+.reveal.active .github-button {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 1.4s;
+}
+
+.github-button {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Sobre - Layout refinado */
+.empresa-content {
+    max-width: 1000px;
+}
+
+.empresa-text {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.empresa-text p {
+    font-size: 19px;
+    color: #d0d0d0;
+    line-height: 1.9;
+    margin-bottom: 28px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+}
+
+/* Cascata */
+.reveal.active .empresa-text p:nth-child(1) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+}
+
+.reveal.active .empresa-text p:nth-child(2) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.6s;
+}
+
+.reveal.active .empresa-text p:nth-child(3) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.9s;
+}
+
+.reveal.active .empresa-text p:nth-child(4) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 1.2s;
+}
+
+/* Destaque nomes estratégicos */
+.destaque-nome {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.fundamentos {
+    background: #0f0f0f;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 20px;
+}
+
+.fundamentos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.fundamentos-titulo {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.linha-decorativa {
+    width: 80px;
+    height: 2px;
+    background: #6c5ce7;
+    margin: 15px auto 30px auto;
+}
+
+.fundamentos-sub {
+    color: #aaaaaa;
+    font-size: 1.1rem;
+    margin-bottom: 60px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card-fundamento {
+    background: #161616;
+    padding: 40px 30px;
+    border-radius: 16px;
+    text-align: left;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.card-fundamento:hover {
+    transform: translateY(-8px);
+    border: 1px solid rgba(108,92,231,0.4);
+    box-shadow: 0 0 25px rgba(108,92,231,0.15);
+}
+
+.card-icone {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.card-fundamento h3 {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.card-fundamento p {
+    color: #bbbbbb;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="img/logo.png" alt="Logotipo Ghostec">
+    </div>
+
+    <nav aria-label="Menu principal">
+        <a href="#produto" class="highlight">Who?</a>
+        <a href="#empresa">Empresa</a>
+        <a href="#segurança">Segurança</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>
+<hr>
+
+<main>
+<hr>
+    <section class="hero">
+        <h1>Segurança não é um recurso. É a base da arquitetura.</h1>
+        <p>
+            Desenvolvemos soluções digitais com foco em proteção, inovação e infraestrutura própria.
+        </p>
+        <a href="#produto">
+            <button>Conheça o Who?</button>
+        </a>
+    </section>
+<hr>
+  <section id="empresa" class="full-screen-section reveal empresa-section">
+    <div class="content empresa-content">
+
+        <h2 class="section-title-ghost">Sobre a Ghostec</h2>
+        <div class="divider"></div>
+
+        <div class="empresa-text">
+
+            <p>
+                A <strong>Ghostec</strong> é uma empresa focada em segurança,
+                inovação e desenvolvimento de soluções digitais estruturadas
+                desde a base com princípios de proteção e escalabilidade.
+            </p>
+
+            <p>
+                Formada por <strong>10 colaboradores</strong>, a Ghostec reúne
+                profissionais com funções estratégicas que abrangem tecnologia,
+                gestão, finanças, marketing, design e operações, garantindo
+                uma estrutura organizacional completa e preparada para crescer.
+            </p>
+
+                          <p>
+    A estrutura estratégica da empresa é conduzida por
+    <span class="destaque-nome">Marina Teodoro</span>, Presidente,
+    responsável por liderar a visão institucional e a gestão geral da organização.
+
+    A execução e direção dos projetos ficam sob responsabilidade de
+    <span class="destaque-nome">Maria Luíza Sousa</span>, CEO,
+    que orienta o desenvolvimento central das soluções,
+    e de <span class="destaque-nome">Guilherme Acussi</span>, CTO,
+    que supervisiona a arquitetura tecnológica, infraestrutura e processos técnicos.
+</p>
+
+            <p>
+                Essa estrutura sólida permite que a Ghostec desenvolva
+                produtos com alto padrão de qualidade, organização interna
+                eficiente e foco constante em evolução tecnológica.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+<hr>
+<section id="produto" class="full-screen-section reveal produto-section">
+    <div class="content product-content">
+
+        <h2 class="section-title-ghost">Produto — Who?</h2>
+        <div class="divider"></div>
+
+        <div class="product-text">
+            <p>
+                O <span class="who-highlight">Who?</span> é uma plataforma digital
+                de perguntas e respostas desenvolvida pela Ghostec com foco em
+                colaboração, anonimato e segurança.
+            </p>
+
+            <p>
+                Criado para incentivar o compartilhamento de conhecimento,
+                o produto oferece um ambiente estruturado, intuitivo e protegido,
+                permitindo interações responsáveis dentro da comunidade.
+            </p>
+
+            <p>
+                Hospedado em infraestrutura própria e construído com arquitetura
+                moderna, o Who? incorpora boas práticas de desenvolvimento,
+                controle administrativo e mecanismos de moderação que garantem
+                estabilidade, desempenho e confiabilidade.
+            </p>
+
+            <p>
+                Mais do que uma aplicação, o Who? representa o compromisso da
+                Ghostec com inovação responsável e soluções digitais preparadas
+                para evoluir.
+            </p>
+
+              <a href="https://github.com/guilhermeacussi/proative-who" 
+       target="_blank" 
+       class="github-button">
+        Explorar no GitHub
+    </a>
+
+        </div>
+
+    </div>
+</section>
+<hr>
+ <section class="fundamentos" id="segurança">
+    <div class="fundamentos-container">
+
+        <h2 class="fundamentos-titulo">
+            Segurança como Fundamento
+        </h2>
+
+        <div class="linha-decorativa"></div>
+
+        <p class="fundamentos-sub">
+            Nossa arquitetura é construída com segurança como princípio, não como complemento.
+        </p>
+
+        <div class="cards-grid">
+
+    <div class="card-fundamento">
+        <div class="card-icone">🛡️</div>
+        <h3>Security by Design</h3>
+        <p>
+            A segurança é considerada desde a concepção do projeto.
+            Modelagem de ameaças e validações estruturais
+            são definidas antes da primeira linha de código.
+        </p>
+    </div>
+
+    <div class="card-fundamento">
+        <div class="card-icone">🖥️</div>
+        <h3>Infraestrutura Própria</h3>
+        <p>
+            VPS dedicada e controle total do ambiente.
+            Monitoramento ativo e isolamento de serviços
+            garantem estabilidade e proteção contínua.
+        </p>
+    </div>
+
+    <div class="card-fundamento">
+        <div class="card-icone">⚙️</div>
+        <h3>Boas Práticas</h3>
+        <p>
+            Código limpo, versionamento estruturado
+            e validações seguras para garantir
+            desempenho e manutenção sustentável.
+        </p>
+    </div>
+
+    <div class="card-fundamento">
+        <div class="card-icone">📐</div>
+        <h3>Arquitetura Planejada</h3>
+        <p>
+            Cada sistema é projetado com foco em escalabilidade,
+            separação de responsabilidades e organização modular.
+        </p>
+    </div>
+
+    <div class="card-fundamento">
+        <div class="card-icone">🔍</div>
+        <h3>Revisão Técnica</h3>
+        <p>
+            Revisões internas garantem qualidade,
+            correção de falhas e aderência aos padrões
+            definidos pela equipe técnica.
+        </p>
+    </div>
+
+    <div class="card-fundamento">
+        <div class="card-icone">🚀</div>
+        <h3>Deploy Controlado</h3>
+        <p>
+            Publicação estruturada com validações,
+            testes e acompanhamento pós-implantação
+            para reduzir riscos operacionais.
+        </p>
+    </div>
+
+    <div class="card-fundamento">
+        <div class="card-icone">📊</div>
+        <h3>Monitoramento Contínuo</h3>
+        <p>
+            Serviços são acompanhados em tempo real,
+            permitindo resposta rápida a incidentes
+            e melhoria constante do ambiente.
+        </p>
+    </div>
+
+    <div class="card-fundamento">
+        <div class="card-icone">🔐</div>
+        <h3>Gestão de Acessos</h3>
+        <p>
+            Controle rigoroso de permissões,
+            autenticação estruturada e proteção
+            contra acessos não autorizados.
+        </p>
+    </div>
+
+<div class="card-fundamento">
+    <div class="card-icone">🧪</div>
+    <h3>Pentest</h3>
+    <p>
+        Realização de testes de intrusão controlados para
+        identificar vulnerabilidades antes que possam ser exploradas.
+        Simulações realistas ajudam a fortalecer a aplicação,
+        a infraestrutura e os fluxos críticos do sistema.
+    </p>
+</div>
+</div>
+</section>
+<hr>
+    <section id="contato">
+        <h2 class="section-title">Contato</h2>
+        <p class="section-text">
+            Em breve disponibilizaremos canais oficiais de contato.
+            Para informações técnicas, acompanhe nossos repositórios.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    © 2026 Ghostec — Segurança & Inovação
+</footer>
+
+<script>
+    const reveals = document.querySelectorAll('.reveal');
+
+    function revealOnScroll() {
+        reveals.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (sectionTop < windowHeight - 100) {
+                section.classList.add('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+</script>
+
+<script>
+window.addEventListener("scroll", function() {
+    const header = document.querySelector("header");
+    header.classList.toggle("scrolled", window.scrollY > 50);
+});
+</script>
+
+</body>
+</html>

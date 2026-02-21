@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: transparent;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+header.scrolled {
+    background: rgba(15, 15, 15, 0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.logo img {
+    margin-top: 6px;
+    height: 55px;
+        filter: brightness(0) invert(1);
+}
+
+/* NAV */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    position: relative;
+    color: #ffffff; /* branco correto */
+    text-decoration: none;
+    margin-left: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+/* Hover */
+nav a:hover {
+    color: #ffffff; /* mantém branco */
+}
+
+/* Linha animada */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: #ffffff; /* linha branca */
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+/* Destaque Who? */
+.highlight {
+    font-weight: 700;
+}
+
+.highlight::after {
+    height: 3px;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    max-width: 800px;
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #b3b3b3;
+    max-width: 600px;
+}
+
+.hero button {
+    margin-top: 40px;
+    padding: 12px 30px;
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero button:hover {
+    background: #ffffff;
+    color: #0a0a0a;
+}
+
+/* SECTIONS */
+section {
+    padding: 100px 60px;
+}
+
+/* FULL SCREEN SECTION */
+.full-screen-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 60px;
+    background: #0f0f0f;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Título animado */
+.section-title-ghost {
+    font-size: 44px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+/* Linha decorativa */
+.divider {
+    width: 60px;
+    height: 2px;
+    background: #ffffff;
+    margin: 0 auto 30px auto;
+    opacity: 0;
+    transition: opacity 1s ease 0.4s;
+}
+
+/* Texto animado */
+.section-text-ghost {
+    font-size: 20px;
+    color: #b3b3b3;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease 0.6s;
+}
+
+/* Reveal */
+.reveal.active .section-title-ghost {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal.active .divider {
+    opacity: 1;
+}
+
+.reveal.active .section-text-ghost {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    gap: 40px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #111111;
+    padding: 30px;
+    flex: 1;
+    min-width: 250px;
+    border: 1px solid #1f1f1f;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: #ffffff;
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #b3b3b3;
+    font-size: 14px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid #1f1f1f;
+    color: #777;
+    font-size: 13px;
+}
+
+/* RESPONSIVO */
+@media(max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    section {
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    nav {
+        display: none;
+    }
+}
